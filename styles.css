@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente y fondo general */
+body {
+  font-family: 'Baloo 2', cursive;
+  background: #fff8f5;
+  color: #444;
+  line-height: 1.7;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Título con degradado pastel */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  background: linear-gradient(90deg, #add8e6, #ffb6c1, #dab6ff, #fff8b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Orejas de gato en el título */
+h1::before,
+h1::after {
+  content: '⟁';
+  position: absolute;
+  top: -20px;
+  font-size: 2rem;
+  color: #ff69b4;
+}
+h1::before {
+  left: 35%;
+  transform: rotate(-20deg);
+}
+h1::after {
+  right: 35%;
+  transform: rotate(20deg);
+}
+
+/* Imagen del michi */
+img {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones decoradas */
+section {
+  background: #e6f0ff; /* azul pastel */
+  border: 3px dashed #add8e6;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 30px 0;
+  position: relative;
+  animation: fadeInUp 1s ease;
+}
+
+/* Lazos en las esquinas */
+section::before, section::after {
+  content: '🎀';
+  font-size: 1.5rem;
+  position: absolute;
+}
+section::before {
+  top: -10px;
+  left: -10px;
+}
+section::after {
+  bottom: -10px;
+  right: -10px;
+}
+
+/* Patitas de gato en los títulos */
+section h2::before {
+  content: '🐾 ';
+}
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #ffe4e1;
+  color: #c71585;
+  padding: 15px;
+  border-radius: 15px;
+  font-style: italic;
+  margin-top: 40px;
+}

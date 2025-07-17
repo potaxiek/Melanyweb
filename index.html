@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MelanyWeb</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>El increíble mundo de mi <span class="michi">Michi</span></h1>
+    <img src="images/gato.webp" id="gato" alt="Mi gata negra en brazos" width="500" />
+    <audio id="maullido" src="sonidos/meow.mp3"></audio>
+  </header>
+
+  <main>
+    <section id="apariencia-caracter">
+      <h2>Apariencia y Carácter</h2>
+      <p>Mi gata es totalmente negra. En su pelaje no encontrarás otro color. Sus ojos son verdes, y depende de la comida que consuma: ella se vuelve más gordita o más flaquita. Actualmente a ella no le gusta la comida que le doy, por eso ella está flaquita.<br><br>
+        Su carácter también varía según el momento del día, con quién esté o incluso dónde esté. Pero resumiéndolo todo, ella es bastante cariñosa y <strong>MUY curiosa</strong>. <br><br>
+        No sé si conocen el dicho de “la curiosidad mató al gato”. Pues yo creo que mi gata tiene muchas más de 7 vidas, porque si no, ella ya no estaría aquí.
+      </p>
+    </section>
+
+    <section id="cosas-que-ama">
+      <h2>Cosas que AMA</h2>
+      <p>
+        Mi gatita, como otros muchos gatos, ama el paté. <br>
+        A mi gata ahora le ha dado por dormir en la ventana, en el bordillo, y a las 3 de la mañana se pone debajo de la cama. Y cuando menos me lo espero, pega tal salto y me da un susto de muerte. <br>
+        Y luego ella duerme conmigo el resto de la madrugada.
+      </p>
+    </section>
+
+    <section id="historia">
+      <h2>Historia</h2>
+      <p>
+        Mi gatita es hija de la gata de una amiga que me regaló a mi actual minina cuando ella tenía 1 año y ya no necesitaba a su madre para que le diese leche. <br>
+        Mi gata se llama Luna, ya que es negra como la luna nueva. <br>
+        Mi Luni actualmente tiene 36 años humanos y 6 gatunos.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con 💖 por Melany</p>
+  </footer>
+
+  <!-- Librería confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Código JavaScript -->
+  <script>
+    const imagenGato = document.getElementById('gato');
+    const sonidoMaullido = document.getElementById('maullido');
+
+    imagenGato.addEventListener('click', () => {
+      sonidoMaullido.currentTime = 0;
+      sonidoMaullido.play();
+
+      confetti({
+        particleCount: 200,
+        spread: 70
+      });
+    });
+  </script>
+
+</body>
+</html>
